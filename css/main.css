@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background: #494949;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  height: 14vh;
+}
+
+.logo {
+  width: 30%;
+  font-size: 25px;
+  color: white;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+  list-style: none;
+  font-weight: bold;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fdfdfd;
+  z-index: 2;
+}
+
+main {
+  position: absolute;
+  top: 0vh;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.home-text h1 {
+  font-size: 2rem;
+}
+
+.home-text p {
+  line-height: 2rem;
+  margin: 4vh 0vh;
+}
+
+.home-text .download-btn {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: dimgray;
+  color: white;
+}
+
+.home-image {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  background-image: url("../images/MateriumBG.png");
+  background-repeat: no-repeat;
+  background-size: 110vh;
+  height: 100%;
+  z-index: -1;
+}
+
+.home-image img {
+  width: 40%;
+}
+
+.features {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.features .features-head {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.features .features-container {
+  width: 80vw;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features .features-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0vh 20vh;
+}
+
+.team {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.team .container {
+  width: 100vw;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.team .card {
+  width: 35vw;
+  height: 27vh;
+  background: #c1c1c1;
+  border-radius: 0.5rem;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.team .card .image {
+  width: 40%;
+  background: #c1c1c1;
+  width: 20vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 20vh;
+  border-radius: 50%;
+  -webkit-box-shadow: -3px -3px 7px #949494, 3px 3px 5px #b3b1b1;
+          box-shadow: -3px -3px 7px #949494, 3px 3px 5px #b3b1b1;
+}
+
+.team .card .image img {
+  width: 70%;
+}
+
+.team .card .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70%;
+}
+
+.team .card .buttons {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.team .card .buttons .btn {
+  background: #c1c1c1;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-box-shadow: -3px -3px 7px #e6dcdc, 3px 3px 5px #a5a5a5;
+          box-shadow: -3px -3px 7px #e6dcdc, 3px 3px 5px #a5a5a5;
+  border: none;
+  -webkit-transition: -webkit-box-shadow 500ms ease;
+  transition: -webkit-box-shadow 500ms ease;
+  transition: box-shadow 500ms ease;
+  transition: box-shadow 500ms ease, -webkit-box-shadow 500ms ease;
+}
+
+.team .card .buttons .btn i {
+  font-size: 18px;
+}
+
+.team .card .buttons .btn a {
+  text-decoration: none;
+}
+
+.team .card .buttons .btn:hover {
+  -webkit-box-shadow: inset -3px -3px 7px #e6dcdc, inset 3px 3px 5px #a5a5a5;
+          box-shadow: inset -3px -3px 7px #e6dcdc, inset 3px 3px 5px #a5a5a5;
+}
+/*# sourceMappingURL=main.css.map */
