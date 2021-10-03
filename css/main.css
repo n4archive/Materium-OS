@@ -424,7 +424,7 @@ main {
     width: 150px;
   }
   .home {
-    height: 140vh;
+    height: 120vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -448,7 +448,7 @@ main {
     margin: 0vh 0vh;
   }
   .features .features-cover {
-    height: 206vh;
+    height: 190vh;
   }
   .features .features-main-container {
     -webkit-box-orient: vertical;
