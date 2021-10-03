@@ -1,3 +1,8 @@
+@font-face {
+  font-family: gilroy;
+  src: url("fonts/Gilroy-Black.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   overflow-x: hidden;
 }
 
@@ -47,6 +52,8 @@ nav {
   list-style: none;
   font-weight: bold;
   z-index: 3;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .nav-links li a {
@@ -74,13 +81,13 @@ main {
 }
 
 .home-text {
-  width: 50%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-orient: vertical;
@@ -89,7 +96,7 @@ main {
           flex-direction: column;
   padding: 0rem 2rem;
   color: white;
-  text-align: center;
+  margin: 0vh 5vh;
 }
 
 .home-text h1 {
@@ -106,7 +113,8 @@ main {
   font-size: 17px;
   border: none;
   border-radius: 0.4rem;
-  background: #525252;
+  background: -webkit-gradient(linear, left bottom, right top, from(violet), color-stop(#0f686b), to(#25deff));
+  background: linear-gradient(to right top, violet, #0f686b, #25deff);
   color: white;
 }
 
@@ -353,5 +361,141 @@ main {
 .team .card .buttons .btn:hover {
   -webkit-box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #dfdfdf;
           box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #dfdfdf;
+}
+
+.hamburger {
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 0rem;
+  display: none;
+}
+
+.hamburger .line1,
+.hamburger .line2,
+.hamburger .line3 {
+  width: 60%;
+  height: 3px;
+  background: #020202;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 100%;
+    background: white;
+    width: 50%;
+    position: absolute;
+    top: 0vh;
+    right: 0vh;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav-links li a {
+    color: black;
+  }
+  .logo {
+    position: absolute;
+    top: 3vh;
+    left: 2vh;
+    width: 150px;
+  }
+  .home {
+    height: 140vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .home-text {
+    margin: 15vh 0vh;
+    width: 95vw;
+  }
+  .home .home-image img {
+    width: 90%;
+  }
+  .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .features .features-head {
+    margin: 0vh 0vh;
+  }
+  .features .features-cover {
+    height: 206vh;
+  }
+  .features .features-main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5vh 0vh;
+    height: auto;
+  }
+  .features .features-main-container img {
+    width: 50%;
+  }
+  .features .features-main-container .features-card {
+    width: 80vw;
+    margin: 4vh 0vh;
+  }
+  .features .features-main-container .features-container {
+    height: auto;
+    padding: 1rem 0rem;
+  }
+  .team {
+    height: auto;
+  }
+  .team .card {
+    width: 90vw;
+    margin: 4vh 0vh;
+    padding: 0rem 0.5rem;
+  }
+  .team .card .image {
+    width: 18vh;
+    height: 15vh;
+  }
+  .team .card .about {
+    width: 80%;
+    margin: 0vh 2vh;
+  }
+  .team .card .about h4 {
+    font-size: 12px;
+  }
+  .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 /*# sourceMappingURL=main.css.map */
