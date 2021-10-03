@@ -471,11 +471,13 @@ main {
   }
   .team {
     height: auto;
+z-index: 8;
   }
   .team .card {
     width: 90vw;
     margin: 4vh 0vh;
     padding: 0rem 0.5rem;
+z-index: 8;
   }
   .team .card .image {
     width: 18vh;
