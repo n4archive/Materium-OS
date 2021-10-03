@@ -449,6 +449,7 @@ main {
   }
   .features .features-cover {
     height: 190vh;
+display: none;
   }
   .features .features-main-container {
     -webkit-box-orient: vertical;
