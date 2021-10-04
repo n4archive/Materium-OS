@@ -1,6 +1,6 @@
 @font-face {
   font-family: gilroy;
-  src: url("fonts/Gilroy-Black.ttf");
+  src: url("../fonts/Gilroy-Black.ttf");
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: gilroy;
   overflow-x: hidden;
 }
 
@@ -113,8 +113,8 @@ main {
   font-size: 17px;
   border: none;
   border-radius: 0.4rem;
-  background: -webkit-gradient(linear, left bottom, right top, from(violet), color-stop(#0f686b), to(#25deff));
-  background: linear-gradient(to right top, violet, #0f686b, #25deff);
+  background: -webkit-gradient(linear, left bottom, right top, from(#80127e), color-stop(#3629ee), to(#00d8ff));
+  background: linear-gradient(to right top, #80127e, #3629ee, #00d8ff);
   color: white;
 }
 
@@ -300,12 +300,11 @@ main {
   place-items: center;
   height: 20vh;
   border-radius: 50%;
-  -webkit-box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
-          box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
 }
 
 .team .card .image img {
   width: 70%;
+  border-radius: 50%;
 }
 
 .team .card .about {
@@ -341,8 +340,6 @@ main {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  -webkit-box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
-          box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
   border: none;
   -webkit-transition: -webkit-box-shadow 500ms ease;
   transition: -webkit-box-shadow 500ms ease;
@@ -356,11 +353,7 @@ main {
 
 .team .card .buttons .btn a {
   text-decoration: none;
-}
-
-.team .card .buttons .btn:hover {
-  -webkit-box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #dfdfdf;
-          box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #dfdfdf;
+  color: black;
 }
 
 .hamburger {
@@ -396,6 +389,23 @@ main {
   background: #020202;
 }
 
+@media screen and (max-width: 950px) {
+  .team {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .team .card {
+    width: 60%;
+    margin: 5vh 0vh;
+  }
+  .image img {
+    width: 20vh !important;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .nav-links {
     -webkit-box-orient: vertical;
@@ -424,7 +434,7 @@ main {
     width: 150px;
   }
   .home {
-    height: 120vh;
+    height: 140vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -448,8 +458,7 @@ main {
     margin: 0vh 0vh;
   }
   .features .features-cover {
-    height: 190vh;
-display: none;
+    display: none;
   }
   .features .features-main-container {
     -webkit-box-orient: vertical;
@@ -472,13 +481,11 @@ display: none;
   }
   .team {
     height: auto;
-z-index: 8;
   }
   .team .card {
     width: 90vw;
     margin: 4vh 0vh;
     padding: 0rem 0.5rem;
-z-index: 8;
   }
   .team .card .image {
     width: 18vh;

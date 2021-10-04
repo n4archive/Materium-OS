@@ -1,6 +1,6 @@
 @font-face {
   font-family: gilroy;
-  src: url("fonts/Gilroy-Black.ttf");
+  src: url("../fonts/Gilroy-Black.ttf");
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: gilroy;
   overflow-x: hidden;
 }
 
@@ -84,12 +84,7 @@ main {
     font-size: 17px;
     border: none;
     border-radius: 0.4rem;
-    background: linear-gradient(
-      to right top,
-      violet,
-      rgb(15, 104, 107),
-      rgb(37, 222, 255)
-    );
+    background: linear-gradient(to right top, #80127e, #3629ee, #00d8ff);
     color: white;
   }
 }
@@ -212,10 +207,10 @@ main {
       place-items: center;
       height: 20vh;
       border-radius: 50%;
-      box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
     }
     .image img {
       width: 70%;
+      border-radius: 50%;
     }
     .about {
       display: flex;
@@ -234,7 +229,6 @@ main {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #dfdfdf;
         border: none;
         transition: box-shadow 500ms ease;
         i {
@@ -242,9 +236,7 @@ main {
         }
         a {
           text-decoration: none;
-        }
-        &:hover {
-          box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #dfdfdf;
+          color: rgb(0, 0, 0);
         }
       }
     }
@@ -272,6 +264,20 @@ main {
     width: 60%;
     height: 3px;
     background: rgb(2, 2, 2);
+  }
+}
+
+@media screen and(max-width: 950px) {
+  .team {
+    flex-direction: column;
+    height: auto;
+    .card {
+      width: 60%;
+      margin: 5vh 0vh;
+    }
+  }
+  .image img {
+    width: 20vh !important;
   }
 }
 
@@ -315,7 +321,7 @@ main {
       margin: 0vh 0vh;
     }
     .features-cover {
-      height: 206vh;
+      display: none;
     }
     .features-main-container {
       flex-direction: column;
