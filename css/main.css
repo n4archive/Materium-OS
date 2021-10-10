@@ -32,6 +32,40 @@ nav {
   height: 14vh;
 }
 
+.slider {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  -webkit-animation: slider 1s ease-in;
+          animation: slider 1s ease-in;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.slider .slider-text {
+  height: 15vh;
+  overflow: hidden;
+}
+
+path {
+  -webkit-animation: slider-text 600ms ease-in;
+          animation: slider-text 600ms ease-in;
+}
+
 .logo {
   width: 15%;
   font-size: 25px;
@@ -48,7 +82,7 @@ nav {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 40%;
+  width: 60%;
   list-style: none;
   font-weight: bold;
   z-index: 3;
@@ -97,6 +131,7 @@ main {
   padding: 0rem 2rem;
   color: white;
   margin: 0vh 5vh;
+  opacity: 0;
 }
 
 .home-text h1 {
@@ -131,6 +166,7 @@ main {
 
 .home-image img {
   width: 45%;
+  opacity: 0;
 }
 
 .features {
@@ -194,7 +230,7 @@ main {
 
 .features .features-container {
   width: 25vw;
-  height: 80%;
+  height: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +248,8 @@ main {
 
 .features .features-card {
   width: 20vw;
+  height: 20vh;
+  border-radius: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +264,36 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0vh 20vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(#cccccc70), to(#e6e6e626));
+  background: linear-gradient(to right bottom, #cccccc70, #e6e6e626);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: #dbdbdb;
+  position: relative;
+  padding: 1rem 0rem;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.features .features-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.features .features-card h1 {
+  font-size: 27px;
+}
+
+.features .features-card h3 {
+  font-size: 20px;
+}
+
+.features .features-card div {
+  position: absolute;
+  top: -5vh;
+  left: 0vh;
 }
 
 .team {
@@ -273,8 +341,9 @@ main {
 }
 
 .team .card {
-  width: 35vw;
-  height: 27vh;
+  width: 25vw;
+  margin: 0vh 5vh;
+  height: 25vh;
   background: #ffffff;
   border-radius: 0.5rem;
   color: black;
@@ -318,6 +387,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 70%;
+  width: 60%;
 }
 
 .team .card .buttons {
@@ -354,7 +424,7 @@ main {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 3vh;
   right: 3vh;
   width: 40px;
@@ -431,14 +501,14 @@ main {
     width: 150px;
   }
   .home {
-    height: 110vh;
+    height: 140vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .home .home-text {
-    margin: 15vh 0vh;
+    margin-top: 15vh;
     width: 95vw;
   }
   .home .home-image img {
@@ -503,6 +573,50 @@ main {
   .nav-active {
     opacity: 1;
     pointer-events: all;
+  }
+}
+
+@-webkit-keyframes slider-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slider-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes svg1 {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes svg1 {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
