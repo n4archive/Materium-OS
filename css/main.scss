@@ -80,7 +80,8 @@ main {
 
 .home {
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  padding: 15vh 0vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -181,8 +182,9 @@ main {
     z-index: 1;
   }
   .features-card {
-    width: 20vw;
-    height: 20vh;
+    width: 24vw;
+    height: auto;
+    /* padding: 2rem 0rem; */
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -192,9 +194,9 @@ main {
     margin: 0vh 20vh;
     background: linear-gradient(to right bottom, #cccccc70, #e6e6e626);
     backdrop-filter: blur(10px);
-    color: rgb(219, 219, 219);
+    color: #dbdbdb;
     position: relative;
-    padding: 1rem 0rem;
+    padding: 2rem 1rem;
     transition: transform 500ms ease;
     &:hover {
       transform: translateY(-10px);
@@ -207,7 +209,7 @@ main {
     }
     div {
       position: absolute;
-      top: -5vh;
+      top: -2vh;
       left: 0vh;
       // animation: svg1 900ms ease infinite alternate;
       // animation-delay: 2s;
@@ -217,7 +219,7 @@ main {
 .team {
   background: rgb(20, 20, 20);
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -239,26 +241,26 @@ main {
     flex-wrap: wrap;
   }
   .card {
-    width: 25vw;
-    margin: 0vh 5vh;
-    height: 25vh;
+    width: 34%;
+    height: 15vh;
     background: #ffffff;
     border-radius: 0.5rem;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 5vh 0vh;
+    padding: 5rem 0rem;
     .image {
-      width: 40%;
-      background: #ffffff;
-      width: 20vh;
+      width: auto;
+      display: -ms-grid;
       display: grid;
       place-items: center;
       height: 20vh;
       border-radius: 50%;
     }
     .image img {
-      width: 70%;
+      width: 50%;
       border-radius: 50%;
     }
     .about {
@@ -266,8 +268,8 @@ main {
       align-items: flex-start;
       justify-content: space-around;
       flex-direction: column;
-      height: 70%;
-      width: 60%;
+      height: 100%;
+      width: 60vw;
     }
     .buttons {
       width: 70%;
