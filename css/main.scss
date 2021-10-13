@@ -210,7 +210,7 @@ main {
     div {
       position: absolute;
       top: -2vh;
-      left: 0vh;
+      left: 1.5vh;
       // animation: svg1 900ms ease infinite alternate;
       // animation-delay: 2s;
     }
@@ -252,7 +252,7 @@ main {
     margin: 5vh 0vh;
     padding: 5rem 0rem;
     .image {
-      width: auto;
+      width: 40%;
       display: -ms-grid;
       display: grid;
       place-items: center;
@@ -268,14 +268,15 @@ main {
       align-items: flex-start;
       justify-content: space-around;
       flex-direction: column;
-      height: 100%;
-      width: 60vw;
+      height: 15vh;
+      width: 60%;
     }
     .buttons {
       width: 70%;
       display: flex;
       align-items: center;
       justify-content: space-around;
+      align-self: flex-start;
       .btn {
         background: #ffffff;
         width: 35px;
@@ -316,6 +317,37 @@ main {
     width: 60%;
     height: 3px;
     background: rgb(2, 2, 2);
+  }
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  background: #2d2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: gray;
+  font-size: 2rem;
+  flex-direction: column;
+  h1 {
+    font-weight: 200;
+  }
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: auto;
+    padding: 0rem 3rem;
+    ul {
+      list-style: none;
+      li a {
+        text-decoration: none;
+        color: gray;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 
@@ -395,12 +427,15 @@ main {
   .team {
     height: auto;
     .card {
-      width: 90vw;
+      width: 85vw;
       margin: 4vh 0vh;
       padding: 0rem 0.5rem;
       .image {
         width: 18vh;
         height: 15vh;
+        img {
+          width: 70% !important;
+        }
       }
       .about {
         width: 80%;
@@ -418,6 +453,12 @@ main {
   .nav-active {
     opacity: 1;
     pointer-events: all;
+  }
+  footer {
+    height: auto;
+    h1 {
+      font-size: 2.3rem !important;
+    }
   }
 }
 
