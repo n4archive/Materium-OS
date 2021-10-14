@@ -53,7 +53,7 @@ nav {
   -webkit-animation-delay: 700ms;
           animation-delay: 700ms;
   pointer-events: none;
-  z-index: 4;
+  z-index: 6;
 }
 
 .slider .slider-text {
@@ -434,7 +434,7 @@ main {
   height: 40px;
   border-radius: 50%;
   background: white;
-  z-index: 6;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +456,7 @@ main {
 .hamburger .line3 {
   width: 60%;
   height: 3px;
-  background: #020202;
+  background: #c8c8c8;
 }
 
 footer {
@@ -534,13 +534,15 @@ footer .footer-container ul li a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     height: 100%;
-    background: white;
-    width: 50%;
+    background: #141414;
+    width: 100%;
     position: fixed;
     top: 0vh;
     right: 0vh;
-    opacity: 0;
-    pointer-events: none;
+    -webkit-clip-path: circle(10px at 90% 5%);
+            clip-path: circle(10px at 90% 5%);
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
   }
   .nav-links li a {
     color: black;
@@ -620,13 +622,17 @@ footer .footer-container ul li a {
     font-size: 12px;
   }
   .hamburger {
+    background: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .nav-active {
+    background: white;
     opacity: 1;
     pointer-events: all;
+    -webkit-clip-path: circle(900px at 90% 10%);
+            clip-path: circle(900px at 90% 10%);
   }
   footer {
     height: auto;

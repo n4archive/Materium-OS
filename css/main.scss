@@ -39,7 +39,7 @@ nav {
   animation: slider 1s ease-in;
   animation-delay: 700ms;
   pointer-events: none;
-  z-index: 4;
+  z-index: 6;
   .slider-text {
     height: 15vh;
     overflow: hidden;
@@ -304,7 +304,7 @@ main {
   height: 40px;
   border-radius: 50%;
   background: white;
-  z-index: 6;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -316,7 +316,7 @@ main {
   .line3 {
     width: 60%;
     height: 3px;
-    background: rgb(2, 2, 2);
+    background: rgb(200, 200, 200);
   }
 }
 
@@ -370,13 +370,13 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    background: white;
-    width: 50%;
+    background: rgb(20, 20, 20);
+    width: 100%;
     position: fixed;
     top: 0vh;
     right: 0vh;
-    opacity: 0;
-    pointer-events: none;
+    clip-path: circle(10px at 90% 5%);
+    transition: all 600ms ease;
     li a {
       color: black;
     }
@@ -447,12 +447,15 @@ footer {
     }
   }
   .hamburger {
+    background: transparent;
     display: flex;
   }
 
   .nav-active {
+    background: white;
     opacity: 1;
     pointer-events: all;
+    clip-path: circle(900px at 90% 10%);
   }
   footer {
     height: auto;
