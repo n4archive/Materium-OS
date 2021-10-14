@@ -190,9 +190,23 @@ main {
       flex-wrap: wrap;
 }
 
-.features img {
+.features .embla {
+  overflow: hidden;
   width: 20%;
-  z-index: 1;
+}
+
+.features .embla__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features .embla__slide {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
 }
 
 .features .features-main-container {

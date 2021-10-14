@@ -129,7 +129,13 @@
               <h3>Feature updates atleast once a year</h3>
             </div>
           </div>
-          <img src="./images/img4.png" alt="" />
+          <div class="embla">
+            <div class="embla__container">
+              <img src="./images/img4.png" class="embla__slide" />
+              <img src="./images/img4.png" class="embla__slide" />
+              <img src="./images/img4.png" class="embla__slide" />
+            </div>
+          </div>
 
           <div class="features-container">
             <div class="features-card">
@@ -369,7 +375,7 @@
         </div>
       </div>
       <footer>
-        <h4 class="footer-text">(c) Project Materium 2021</h1>
+        <h1 class="footer-text">(c) Project Materium 2021</h1>
         <div class="footer-container">
           <div class="footer-nav">
             <ul>
@@ -411,6 +417,57 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      const emblaNode = document.querySelector(".embla");
+
+      const autoplay = (embla, interval) => {
+        let timer = 0;
+
+        const play = () => {
+          stop();
+          requestAnimationFrame(
+            () => (timer = window.setTimeout(next, interval))
+          );
+        };
+
+        const stop = () => {
+          window.clearTimeout(timer);
+          timer = 0;
+        };
+
+        const next = () => {
+          if (embla.canScrollNext()) {
+            embla.scrollNext();
+          } else {
+            embla.scrollTo(0);
+          }
+          play();
+        };
+
+        return { play, stop };
+      };
+
+      const options = {
+        loop: true,
+      };
+      // Initialize the carousel
+      const embla = EmblaCarousel(emblaNode, options);
+      const autoplayer = autoplay(embla, 3000);
+      embla.on("init", autoplayer.play);
+      embla.on("pointerDown", autoplayer.stop);
+      embla.on("pointerUp", autoplayer.play);
     </script>
   </body>
 </html>

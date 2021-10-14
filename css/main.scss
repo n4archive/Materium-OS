@@ -142,10 +142,20 @@ main {
   position: relative;
   color: white;
   flex-wrap: wrap;
-  img {
+
+  .embla {
+    overflow: hidden;
     width: 20%;
-    z-index: 1;
   }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    position: relative;
+    flex: 1;
+    width: 100%;
+  }
+
   .features-main-container {
     width: 100vw;
     height: 90vh;
