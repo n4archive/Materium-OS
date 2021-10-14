@@ -1,8 +1,15 @@
 const hamburger = document.querySelector(".hamburger");
+const list = document.querySelectorAll(".nav-links li");
+const navLinks = document.querySelector(".nav-links");
 
 hamburger.addEventListener("click", () => {
-  const navLinks = document.querySelector(".nav-links");
   navLinks.classList.toggle("nav-active");
+});
+
+list.forEach((li) => {
+  li.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-active");
+  });
 });
 
 gsap.to(".slider", { opacity: 0, delay: 1.5, duration: 0.7 });
