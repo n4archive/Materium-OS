@@ -415,6 +415,13 @@ footer {
   .features {
     flex-direction: column;
     height: auto;
+    .embla {
+      width: 70%;
+      .embla__slide {
+        flex: 1;
+        width: 100%;
+      }
+    }
     .features-head {
       margin: 0vh 0vh;
     }

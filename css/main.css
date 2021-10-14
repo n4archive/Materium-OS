@@ -592,6 +592,15 @@ footer .footer-container ul li a {
             flex-direction: column;
     height: auto;
   }
+  .features .embla {
+    width: 70%;
+  }
+  .features .embla .embla__slide {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+  }
   .features .features-head {
     margin: 0vh 0vh;
   }
