@@ -39,13 +39,12 @@ nav {
   animation: slider 1s ease-in;
   animation-delay: 700ms;
   pointer-events: none;
-  z-index: 6;
+  z-index: 3;
   .slider-text {
     height: 15vh;
     overflow: hidden;
   }
 }
-
 path {
   animation: slider-text 600ms ease-in;
 }
@@ -54,7 +53,10 @@ path {
   width: 15%;
   font-size: 25px;
   color: white;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
+  top: 5vh;
+  left: 15vh;
 }
 
 .nav-links {
@@ -62,10 +64,13 @@ path {
   align-items: center;
   justify-content: space-around;
   width: 60%;
+  font-size: 20px;
   list-style: none;
   font-weight: bold;
-  z-index: 3;
+  z-index: 1;
   transition: all 300ms ease;
+  opacity: 0;
+  transform: translateY(-100px);
 }
 
 .nav-links li a {
@@ -86,6 +91,21 @@ main {
   align-items: center;
   justify-content: space-around;
   background: rgb(20, 20, 20);
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: 30%;
+    right: 0vh;
+    width: 45vw;
+    height: 55vh;
+    border-radius: 5rem;
+    background: #5c00d1;
+    z-index: 0;
+    margin-right: -10vh;
+    transform: translateX(100px);
+    opacity: 0;
+  }
 }
 
 .home-text {
@@ -97,12 +117,14 @@ main {
   padding: 0rem 2rem;
   color: white;
   margin: 0vh 5vh;
+  transform: translateX(-100px);
   opacity: 0;
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   p {
-    line-height: 2rem;
+    line-height: 2.2rem;
+    font-size: 1.1rem;
     margin: 4vh 0vh;
   }
   .download-btn {
@@ -127,7 +149,150 @@ main {
 
 .home-image img {
   width: 45%;
+  transform: translateX(100px);
   opacity: 0;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  clip-path: circle(0px at 100% 0%);
+  height: 100vh;
+  width: 100vw;
+  background: rgb(20, 20, 20);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 500ms ease-in-out;
+  .overlay-badge {
+    position: absolute;
+    top: 0vh;
+    right: 0vh;
+    width: 10vw;
+    height: 100%;
+    background: #5c00d1;
+  }
+  .overlay-left {
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .overlay-about {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      h1 {
+        font-size: 5rem;
+        color: white;
+      }
+      .overlay-buttons {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        button {
+          padding: 0.6rem 2rem;
+          background: #5c00d1;
+          border-radius: 8px;
+          border: none;
+          font-size: 18px;
+          color: white;
+        }
+      }
+    }
+    .overlay-maintainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 20vh;
+      width: 100%;
+      h1 {
+        font-size: 2.5rem;
+        color: white;
+      }
+      button {
+        padding: 0.6rem 2rem;
+        background: #5c00d1;
+        border-radius: 8px;
+        border: none;
+        font-size: 18px;
+        color: white;
+      }
+    }
+    .overlay-logo {
+      width: 40%;
+      color: white;
+    }
+  }
+  .overlay-right {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .overlay-nav {
+      height: 45vh;
+      font-size: 1.5rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      li a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.hamburger {
+  position: fixed;
+  top: 5vh;
+  right: 15vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #5c00d1;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0.5rem 0rem;
+  .line1,
+  .line2,
+  .line3 {
+    width: 55%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.nav-active {
+  clip-path: circle(900px);
+}
+
+.hamburger-active {
+  .line2 {
+    opacity: 0;
+  }
+  .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
 }
 
 .features {
@@ -306,30 +471,6 @@ main {
   }
 }
 
-.hamburger {
-  position: fixed;
-  top: 3vh;
-  right: 3vh;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 0.5rem 0rem;
-  display: none;
-  .line1,
-  .line2,
-  .line3 {
-    width: 60%;
-    height: 3px;
-    background: rgb(200, 200, 200);
-  }
-}
-
 footer {
   width: 100vw;
   height: auto;
@@ -376,6 +517,9 @@ footer {
 }
 
 @media only screen and(max-width: 700px) {
+  .badge {
+    display: none;
+  }
   .nav-links {
     flex-direction: column;
     justify-content: space-evenly;
@@ -402,14 +546,15 @@ footer {
     width: 150px;
   }
   .home {
-    height: 140vh;
+    height: auto;
+    padding: 7vh 0vh;
     flex-direction: column;
     .home-text {
       margin-top: 15vh;
       width: 95vw;
     }
     .home-image img {
-      width: 90%;
+      width: 100%;
     }
   }
   .features {
@@ -467,16 +612,59 @@ footer {
       }
     }
   }
+
   .hamburger {
-    background: transparent;
-    display: flex;
+    top: 3vh;
+    right: 3vh;
   }
 
-  .nav-active {
-    background: white;
-    pointer-events: all;
-    clip-path: circle(900px at 90% 10%);
+  .nav-overlay {
+    flex-direction: column;
+    .overlay-left {
+      padding: 1rem 0rem;
+      height: 50%;
+      img {
+        width: 60% !important;
+      }
+      .overlay-about {
+        h1 {
+          font-size: 2rem;
+        }
+        .overlay-buttons {
+          width: 50vw;
+        }
+        button {
+          display: grid;
+          place-items: center;
+          place-content: center;
+          #btn-text {
+            display: none;
+          }
+          padding: 0rem 0rem !important;
+          width: 35px;
+          height: 35px;
+          border-radius: 50% !important;
+        }
+      }
+      .overlay-maintainer {
+        width: 100%;
+        h1 {
+          line-height: 2rem;
+          font-size: 1.1rem;
+        }
+        button {
+          padding: 0.5rem 1.5rem;
+        }
+      }
+    }
+    .overlay-badge {
+      width: 11vw;
+    }
+    .overlay-right {
+      height: 50%;
+    }
   }
+
   li.fade {
     opacity: 1;
     transform: translateX(0px);

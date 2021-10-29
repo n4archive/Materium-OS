@@ -53,7 +53,7 @@ nav {
   -webkit-animation-delay: 700ms;
           animation-delay: 700ms;
   pointer-events: none;
-  z-index: 6;
+  z-index: 3;
 }
 
 .slider .slider-text {
@@ -70,7 +70,10 @@ path {
   width: 15%;
   font-size: 25px;
   color: white;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
+  top: 5vh;
+  left: 15vh;
 }
 
 .nav-links {
@@ -83,11 +86,15 @@ path {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 60%;
+  font-size: 20px;
   list-style: none;
   font-weight: bold;
-  z-index: 3;
+  z-index: 1;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .nav-links li a {
@@ -113,6 +120,22 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: #141414;
+  position: relative;
+}
+
+.home .badge {
+  position: absolute;
+  top: 30%;
+  right: 0vh;
+  width: 45vw;
+  height: 55vh;
+  border-radius: 5rem;
+  background: #5c00d1;
+  z-index: 0;
+  margin-right: -10vh;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
 }
 
 .home-text {
@@ -132,15 +155,18 @@ main {
   padding: 0rem 2rem;
   color: white;
   margin: 0vh 5vh;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
   opacity: 0;
 }
 
 .home-text h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .home-text p {
-  line-height: 2rem;
+  line-height: 2.2rem;
+  font-size: 1.1rem;
   margin: 4vh 0vh;
 }
 
@@ -167,7 +193,226 @@ main {
 
 .home-image img {
   width: 45%;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
   opacity: 0;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  -webkit-clip-path: circle(0px at 100% 0%);
+          clip-path: circle(0px at 100% 0%);
+  height: 100vh;
+  width: 100vw;
+  background: #141414;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-overlay .overlay-badge {
+  position: absolute;
+  top: 0vh;
+  right: 0vh;
+  width: 10vw;
+  height: 100%;
+  background: #5c00d1;
+}
+
+.nav-overlay .overlay-left {
+  width: 60vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-overlay .overlay-left .overlay-about {
+  width: 100%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-overlay .overlay-left .overlay-about h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+.nav-overlay .overlay-left .overlay-about .overlay-buttons {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-overlay .overlay-left .overlay-about .overlay-buttons button {
+  padding: 0.6rem 2rem;
+  background: #5c00d1;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+.nav-overlay .overlay-left .overlay-maintainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20vh;
+  width: 100%;
+}
+
+.nav-overlay .overlay-left .overlay-maintainer h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.nav-overlay .overlay-left .overlay-maintainer button {
+  padding: 0.6rem 2rem;
+  background: #5c00d1;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+.nav-overlay .overlay-left .overlay-logo {
+  width: 40%;
+  color: white;
+}
+
+.nav-overlay .overlay-right {
+  width: 40vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-overlay .overlay-right .overlay-nav {
+  height: 45vh;
+  font-size: 1.5rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+.nav-overlay .overlay-right .overlay-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger {
+  position: fixed;
+  top: 5vh;
+  right: 15vh;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #5c00d1;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 0rem;
+}
+
+.hamburger .line1,
+.hamburger .line2,
+.hamburger .line3 {
+  width: 55%;
+  height: 3px;
+  background: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-active {
+  -webkit-clip-path: circle(900px);
+          clip-path: circle(900px);
+}
+
+.hamburger-active .line2 {
+  opacity: 0;
+}
+
+.hamburger-active .line1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+          transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.hamburger-active .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -7px);
+          transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .features {
@@ -440,39 +685,6 @@ main {
   color: black;
 }
 
-.hamburger {
-  position: fixed;
-  top: 3vh;
-  right: 3vh;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0.5rem 0rem;
-  display: none;
-}
-
-.hamburger .line1,
-.hamburger .line2,
-.hamburger .line3 {
-  width: 60%;
-  height: 3px;
-  background: #c8c8c8;
-}
-
 footer {
   width: 100vw;
   height: auto;
@@ -539,6 +751,9 @@ footer .footer-container ul li a {
 }
 
 @media only screen and (max-width: 700px) {
+  .badge {
+    display: none;
+  }
   .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -572,7 +787,8 @@ footer .footer-container ul li a {
     width: 150px;
   }
   .home {
-    height: 140vh;
+    height: auto;
+    padding: 7vh 0vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -583,7 +799,7 @@ footer .footer-container ul li a {
     width: 95vw;
   }
   .home .home-image img {
-    width: 90%;
+    width: 100%;
   }
   .features {
     -webkit-box-orient: vertical;
@@ -649,16 +865,56 @@ footer .footer-container ul li a {
     font-size: 12px;
   }
   .hamburger {
-    background: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    top: 3vh;
+    right: 3vh;
   }
-  .nav-active {
-    background: white;
-    pointer-events: all;
-    -webkit-clip-path: circle(900px at 90% 10%);
-            clip-path: circle(900px at 90% 10%);
+  .nav-overlay {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-overlay .overlay-left {
+    padding: 1rem 0rem;
+    height: 50%;
+  }
+  .nav-overlay .overlay-left img {
+    width: 60% !important;
+  }
+  .nav-overlay .overlay-left .overlay-about h1 {
+    font-size: 2rem;
+  }
+  .nav-overlay .overlay-left .overlay-about .overlay-buttons {
+    width: 50vw;
+  }
+  .nav-overlay .overlay-left .overlay-about button {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    padding: 0rem 0rem !important;
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+  }
+  .nav-overlay .overlay-left .overlay-about button #btn-text {
+    display: none;
+  }
+  .nav-overlay .overlay-left .overlay-maintainer {
+    width: 100%;
+  }
+  .nav-overlay .overlay-left .overlay-maintainer h1 {
+    line-height: 2rem;
+    font-size: 1.1rem;
+  }
+  .nav-overlay .overlay-left .overlay-maintainer button {
+    padding: 0.5rem 1.5rem;
+  }
+  .nav-overlay .overlay-badge {
+    width: 11vw;
+  }
+  .nav-overlay .overlay-right {
+    height: 50%;
   }
   li.fade {
     opacity: 1;

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="./images/Logo.png" type="image/icon type" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
@@ -22,6 +23,46 @@
     <title>Project Materium</title>
   </head>
   <body>
+    <div class="nav-overlay">
+      <div class="overlay-badge"></div>
+      <div class="overlay-left">
+        <img
+          src="/images/logo and tagline.png"
+          alt="Logo"
+          class="overlay-logo"
+        />
+        <div class="overlay-about">
+          <h1>Contact Us On</h1>
+          <div class="overlay-buttons">
+            <button>
+              <i class="fab fa-telegram-plane"></i>
+              <span class="space"></span> <span id="btn-text"> Telegram </span>
+            </button>
+            <button>
+              <i class="fab fa-twitter"></i> <span class="space"></span>
+              <span id="btn-text"> Twitter </span>
+            </button>
+            <button>
+              <i class="fab fa-github"></i> <span class="space"></span>
+              <span id="btn-text"> GitHub </span>
+            </button>
+          </div>
+        </div>
+        <div class="overlay-maintainer">
+          <h1>Want to be a maintainer?</h1>
+          <button>Fill it out</button>
+        </div>
+      </div>
+      <div class="overlay-right">
+        <ul class="overlay-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="#team">The team</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="slider">
       <svg
         width="631"
@@ -43,17 +84,18 @@
       <div class="line2"></div>
       <div class="line3"></div>
     </div>
-    <nav>
-      <img src="./images/logo and tagline.png" alt="Logo" class="logo" />
-      <ul class="nav-links">
+    <nav class="nav">
+      <!-- <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#downloads">Downloads</a></li>
         <li><a href="#team">Maintainers</a></li>
-      </ul>
+      </ul> -->
     </nav>
+    <img src="./images/logo and tagline.png" alt="Logo" class="logo" />
 
     <main>
       <div class="home" id="home">
+        <div class="badge"></div>
         <div class="home-text">
           <h1>Project Materium</h1>
           <p>
