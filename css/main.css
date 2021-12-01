@@ -61,11 +61,6 @@ nav {
   overflow: hidden;
 }
 
-path {
-  -webkit-animation: slider-text 600ms ease-in;
-          animation: slider-text 600ms ease-in;
-}
-
 .logo {
   width: 15%;
   font-size: 25px;
@@ -242,8 +237,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .nav-overlay .overlay-left .overlay-about {
@@ -259,8 +255,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .nav-overlay .overlay-left .overlay-about h1 {
@@ -276,8 +273,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .nav-overlay .overlay-left .overlay-about .overlay-buttons button {
@@ -397,8 +395,8 @@ main {
 }
 
 .nav-active {
-  -webkit-clip-path: circle(900px);
-          clip-path: circle(900px);
+  -webkit-clip-path: circle(1200px);
+          clip-path: circle(1200px);
 }
 
 .hamburger-active .line2 {
@@ -602,7 +600,7 @@ main {
 }
 
 .team .card {
-  width: 34%;
+  width: 30%;
   height: 15vh;
   background: #ffffff;
   border-radius: 0.5rem;
@@ -615,7 +613,7 @@ main {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 5vh 0vh;
+  margin: 5vh 5vh;
   padding: 5rem 0rem;
 }
 
@@ -651,17 +649,9 @@ main {
 }
 
 .team .card .buttons {
-  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
 .team .card .buttons .btn {
@@ -670,6 +660,7 @@ main {
   height: 35px;
   border-radius: 50%;
   border: none;
+  margin-right: 15px;
   -webkit-transition: -webkit-box-shadow 500ms ease;
   transition: -webkit-box-shadow 500ms ease;
   transition: box-shadow 500ms ease;
@@ -677,7 +668,7 @@ main {
 }
 
 .team .card .buttons .btn i {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .team .card .buttons .btn a {
@@ -873,10 +864,11 @@ footer .footer-container ul li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    overflow: hidden;
   }
   .nav-overlay .overlay-left {
     padding: 1rem 0rem;
-    height: 50%;
+    height: 40%;
   }
   .nav-overlay .overlay-left img {
     width: 60% !important;
@@ -914,7 +906,7 @@ footer .footer-container ul li a {
     width: 11vw;
   }
   .nav-overlay .overlay-right {
-    height: 50%;
+    height: 60%;
   }
   li.fade {
     opacity: 1;
@@ -926,28 +918,6 @@ footer .footer-container ul li a {
   }
   footer h1 {
     font-size: 2.3rem !important;
-  }
-}
-
-@-webkit-keyframes slider-text {
-  from {
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slider-text {
-  from {
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
-    opacity: 1;
   }
 }
 
