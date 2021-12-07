@@ -809,6 +809,9 @@ footer .footer-container ul li a {
   .features .features-main-container img {
     width: 50%;
   }
+   .features . features-main-container .swiper {
+      width: 40%;
+}
   .features .features-main-container .features-card {
     width: 80vw;
     margin: 4vh 0vh;
