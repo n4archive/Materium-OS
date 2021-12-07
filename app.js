@@ -25,3 +25,27 @@ gsap.to(".home-image img", {
   delay: 1.8,
   duration: 0.7,
 });
+
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  autoplay: {
+    delay: 3000,
+  },
+
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+
+  //coverflow effect
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 50,
+    slideShadows: false,
+  },
+});
+
