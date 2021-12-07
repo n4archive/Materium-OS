@@ -433,25 +433,6 @@ main {
       flex-wrap: wrap;
 }
 
-.features .embla {
-  overflow: hidden;
-  width: 20%;
-}
-
-.features .embla__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.features .embla__slide {
-  position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 100%;
-}
-
 .features .features-main-container {
   width: 100vw;
   height: 90vh;
@@ -463,6 +444,10 @@ main {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.features .features-main-container .swiper {
+  width: 25%;
 }
 
 .features .features-cover {
@@ -506,7 +491,7 @@ main {
 
 .features .features-card {
   width: 24vw;
-  height: auto;
+  min-height: 20vh;
   /* padding: 2rem 0rem; */
   border-radius: 0.5rem;
   display: -webkit-box;
@@ -522,7 +507,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0vh 20vh;
   background: -webkit-gradient(linear, left top, right bottom, from(#cccccc70), to(#e6e6e626));
   background: linear-gradient(to right bottom, #cccccc70, #e6e6e626);
   -webkit-backdrop-filter: blur(5px);
@@ -825,6 +809,9 @@ footer .footer-container ul li a {
   .features .features-main-container img {
     width: 50%;
   }
+   .features . features-main-container .swiper {
+      width: 40%;
+}
   .features .features-main-container .features-card {
     width: 80vw;
     margin: 4vh 0vh;
